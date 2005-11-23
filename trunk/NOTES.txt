@@ -1,0 +1,51 @@
+==========
+ Refaqtor
+==========
+
+-------
+ Notes
+-------
+
+.. role:: raw-html(raw)
+   :format: html
+
+:Last Changed: $Date: 2005-08-03T16:41:06.444837Z $
+
+
+.. sectnum::
+
+.. contents::
+
+
+Determining beat points
+=======================
+
+Get sample index of start beat.
+
+Get sample index of start beat + x beats.
+
+Get sample index of stop beat.
+
+Determine number of beats from start to stop.
+
+For entire song:
+
+   Loop x number of beats from sample index of start beat.
+
+   Allow adjustment of end sample index.
+
+   Record beat segment.
+
+After beats have been determined:
+
+   Allow extrapolation before first beat start index for beatless
+   intros.
+
+   Allow extrapolation after end index for beatless outtros.
+
+
+..
+     Local Variables:
+     mode: rst
+     End: 
+
