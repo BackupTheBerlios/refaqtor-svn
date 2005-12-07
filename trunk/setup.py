@@ -11,14 +11,14 @@ from setuptools.command.sdist import sdist as _sdist
 
 
 # Grab project version information.
-execfile('src/refaqtor/version.py')
+from refaqtor.version import *
 
 
-packages = find_packages('src')
+packages = find_packages(exclude=['bin', 'doc', 'ez_setup', 'examples'])
 
 
 extensions = [
-##     Extension('refaqtor._whatever', ['src/refaqtor/_whatever.c']),
+##     Extension('refaqtor._whatever', ['refaqtor/_whatever.c']),
     ]
 
 
@@ -67,9 +67,7 @@ setup(
     ],
     zip_safe=False,
 
-    package_dir={'': 'src'},
     packages=packages,
-    package_data={'': ['*.source']},
     cmdclass={'sdist': sdist},
 
     ext_modules=extensions,
